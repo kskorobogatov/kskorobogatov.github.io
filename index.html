@@ -17,69 +17,121 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
       <link rel="icon" href="./resources/profilepic.jpg" sizes="32x32">
       <style>
+         /* General body and background styling */
          body {
-            font-family: "Salesforce Sans", Arial, sans-serif;
-            background-color: #f4f6f9;
+            font-family: 'Courier New', monospace; /* Monospaced font for terminal feel */
+            background-color: #1e1e1e; /* Dark background */
+            color: #d4d4d4; /* Light gray text for readability */
             margin: 0;
             padding: 0;
          }
+
          header {
-            background: linear-gradient(90deg, #0176d3, #0288d1);
+            background: #333; /* Dark header */
             color: white;
-            padding: 20px 0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
          }
+
+         /* Terminal-like buttons in the header */
+         .header-buttons {
+            display: flex;
+            gap: 10px;
+         }
+
+         .header-buttons button {
+            background-color: #f44336; /* Red button */
+            border: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+         }
+
+         .header-buttons button:nth-child(2) {
+            background-color: #ffeb3b; /* Yellow button */
+         }
+
+         .header-buttons button:nth-child(3) {
+            background-color: #4caf50; /* Green button */
+         }
+
+         .header-buttons button:hover {
+            opacity: 0.8;
+         }
+
          .header-content {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
          }
+
+         /* Styling for header text */
          .header-text h1 {
             font-size: 2.5rem;
             font-weight: bold;
          }
+
          .header-text p {
-            margin: 10px 0 20px;
             font-size: 1.2rem;
+            margin: 10px 0;
          }
+
+         /* Styling for the main content card */
          .light-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: #2d2d2d; /* Slightly lighter dark background */
+            border-radius: 10px;
             padding: 20px;
             margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
          }
-         footer {
-            background: #f4f6f9;
-            color: #6b6b6b;
-            text-align: center;
-            padding: 15px 0;
+
+         h2 {
+            font-size: 1.6rem;
+            color: #8d8d8d; /* Slightly lighter gray for headers */
          }
+
          .btn-lightning {
-            background: #0176d3;
+            background: #0176d3; /* Salesforce blue */
             color: white;
-            border: none;
             padding: 10px 20px;
             border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             font-weight: bold;
+            text-decoration: none;
          }
+
          .btn-lightning:hover {
             background: #005bb5;
+         }
+
+         footer {
+            background: #333;
+            color: #6b6b6b;
+            text-align: center;
+            padding: 15px;
          }
       </style>
    </head>
    <body>
       <!-- Header Section -->
       <header>
-         <div class="container">
-            <div class="header-content">
-               <div class="header-text">
-                  <h1>Kirill Skorobogatov</h1>
-                  <p>Driving Efficiency and Innovation for Businesses with Salesforce ☁️, Back-End, and Mobile Development</p>
-                  <div>
-				     <a href="https://github.com/kskorobogatov" target="_blank" class="btn btn-lightning">GitHub</a>
-                     <a href="https://linkedin.com/in/kskorobogatov" target="_blank" class="btn btn-lightning">LinkedIn</a>
-                     <a href="https://www.salesforce.com/trailblazer/kskorobogatov" target="_blank" class="btn btn-lightning">Trailhead</a>
-                  </div>
+         <div class="header-buttons">
+            <button></button>
+            <button></button>
+            <button></button>
+         </div>
+         <div class="header-content">
+            <div class="header-text">
+               <h1>Kirill Skorobogatov</h1>
+               <p>Driving Efficiency and Innovation for Businesses with Salesforce ☁️, Back-End, and Mobile Development</p>
+               <div>
+                  <a href="https://github.com/kskorobogatov" target="_blank" class="btn btn-lightning">GitHub</a>
+                  <a href="https://linkedin.com/in/kskorobogatov" target="_blank" class="btn btn-lightning">LinkedIn</a>
+                  <a href="https://www.salesforce.com/trailblazer/kskorobogatov" target="_blank" class="btn btn-lightning">Trailhead</a>
                </div>
             </div>
          </div>
@@ -88,9 +140,7 @@
       <div class="container">
          <div class="light-card">
             <h2>About Me</h2>
-            <p>
-               Driving Efficiency and Innovation for Businesses with Salesforce ☁️, AI, Back-End, and Mobile Development
-            </p>
+            <p>Driving Efficiency and Innovation for Businesses with Salesforce ☁️, AI, Back-End, and Mobile Development</p>
          </div>
          <div class="light-card">
             <h2>Key Skills</h2>
