@@ -19,145 +19,154 @@
       <style>
          /* General body and background styling */
          body {
-            font-family: 'Courier New', monospace; /* Monospaced font for terminal feel */
-            background-color: #000; /* Black background to mimic terminal */
-            color: #33ff00; /* Green text, typical for terminals */
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fc; /* Soft light background */
             margin: 0;
             padding: 0;
+            color: #333; /* Dark text for better readability */
          }
 
-         /* Terminal window container */
-         .terminal-container {
-            width: 80%; /* Adjust width of the terminal window */
-            margin: 50px auto;
-            background-color: #1e1e1e; /* Dark background for terminal window */
-            padding: 20px;
-            border: 2px solid #333;
-            border-radius: 5px; /* Optional: sharp edges to look more like a window */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-         }
-
+         /* Header section */
          header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #333;
-            padding: 10px;
-            border-radius: 5px 5px 0 0;
-            margin: -20px -20px 20px -20px;
-         }
-
-         /* Terminal-like buttons in the header */
-         .header-buttons {
-            display: flex;
-            gap: 10px;
-         }
-
-         .header-buttons button {
-            background-color: #f44336; /* Red button */
-            border: none;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            cursor: pointer;
-         }
-
-         .header-buttons button:nth-child(2) {
-            background-color: #ffeb3b; /* Yellow button */
-         }
-
-         .header-buttons button:nth-child(3) {
-            background-color: #4caf50; /* Green button */
-         }
-
-         .header-buttons button:hover {
-            opacity: 0.8;
-         }
-
-         .header-content {
+            background: linear-gradient(90deg, #4e73df, #1cc88a); /* Colorful gradient */
+            padding: 40px 0;
+            text-align: center;
             color: white;
          }
 
-         .header-text h1 {
-            font-size: 1.8rem;
-            margin: 0;
+         .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
          }
 
-         .header-text p {
-            font-size: 1rem;
-         }
-
-         /* Styling for the terminal content */
-         .terminal-content {
-            white-space: pre-wrap; /* Preserve whitespace like a terminal */
-            word-wrap: break-word;
+         .header-content p {
             font-size: 1.2rem;
-            line-height: 1.6;
+            margin-bottom: 20px;
          }
 
          .btn-lightning {
-            background: #33ff00; /* Terminal green for links */
-            color: black;
-            padding: 8px 16px;
-            border: 2px solid #33ff00;
-            border-radius: 5px;
+            background: #ff7f50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
             text-decoration: none;
-            font-size: 1rem;
+            margin: 0 10px;
+            transition: background-color 0.3s;
          }
 
          .btn-lightning:hover {
-            background: #26c900;
-            border: 2px solid #26c900;
+            background: #ff4500;
          }
 
+         /* Main content sections */
+         .content-section {
+            padding: 40px 20px;
+            background-color: white;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+         }
+
+         .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+         }
+
+         .content-section ul {
+            list-style-type: none;
+            padding: 0;
+         }
+
+         .content-section ul li {
+            font-size: 1.2rem;
+            margin: 10px 0;
+         }
+
+         /* Footer section */
          footer {
-            background: #333;
-            color: #6b6b6b;
             text-align: center;
-            padding: 10px;
-            margin-top: 20px;
+            padding: 20px;
+            background-color: #4e73df;
+            color: white;
          }
 
-         /* Adjustments for scrolling */
-         .terminal-container {
-            max-height: 80vh;
-            overflow-y: auto;
+         footer p {
+            font-size: 1rem;
+         }
+
+         /* Responsive design */
+         @media (max-width: 768px) {
+            .header-content h1 {
+               font-size: 2.5rem;
+            }
+
+            .header-content p {
+               font-size: 1.1rem;
+            }
+
+            .content-section {
+               padding: 20px 15px;
+            }
+
+            .content-section h2 {
+               font-size: 1.8rem;
+            }
+
+            .btn-lightning {
+               padding: 8px 16px;
+            }
+         }
+
+         @media (max-width: 480px) {
+            .header-content h1 {
+               font-size: 2rem;
+            }
+
+            .header-content p {
+               font-size: 1rem;
+            }
+
+            .content-section h2 {
+               font-size: 1.5rem;
+            }
          }
       </style>
    </head>
    <body>
-      <div class="terminal-container">
-         <!-- Header Section -->
-         <header>
-            <div class="header-buttons">
-               <button></button>
-               <button></button>
-               <button></button>
-            </div>
+      <!-- Header Section -->
+      <header>
+         <div class="container">
             <div class="header-content">
                <h1>Kirill Skorobogatov</h1>
-               <p>Salesforce Lightning Developer</p>
-            </div>
-         </header>
-         <!-- Main Content Section -->
-         <div class="terminal-content">
-            <div>
-               <strong>About Me:</strong><br>
-               Driving Efficiency and Innovation for Businesses with Salesforce ☁️, AI, Back-End, and Mobile Development.<br><br>
-
-               <strong>Key Skills:</strong><br>
-               - Salesforce Customization and Development<br>
-               - Back-End Web Development<br>
-               - Mobile App Development (iOS & Android)<br>
-               - Database Design and Management<br>
-               - Continuous Integration/Delivery (CI/CD)<br><br>
-
-               <strong>Contact Me:</strong><br>
-               If you'd like to collaborate or have any questions, feel free to reach out through my profiles.<br>
-               <a href="https://github.com/kskorobogatov" target="_blank" class="btn-lightning">GitHub</a> 
-               <a href="https://linkedin.com/in/kskorobogatov" target="_blank" class="btn-lightning">LinkedIn</a> 
+               <p>Driving Efficiency and Innovation for Businesses with Salesforce ☁️, Back-End, and Mobile Development</p>
+               <a href="https://github.com/kskorobogatov" target="_blank" class="btn-lightning">GitHub</a>
+               <a href="https://linkedin.com/in/kskorobogatov" target="_blank" class="btn-lightning">LinkedIn</a>
                <a href="https://www.salesforce.com/trailblazer/kskorobogatov" target="_blank" class="btn-lightning">Trailhead</a>
             </div>
+         </div>
+      </header>
+
+      <!-- Main Content Section -->
+      <div class="container">
+         <div class="content-section">
+            <h2>About Me</h2>
+            <p>Driving Efficiency and Innovation for Businesses with Salesforce ☁️, AI, Back-End, and Mobile Development.</p>
+         </div>
+         <div class="content-section">
+            <h2>Key Skills</h2>
+            <ul>
+               <li>Salesforce Customization and Development</li>
+               <li>Back-End Web Development</li>
+               <li>Mobile App Development (iOS & Android)</li>
+               <li>Database Design and Management</li>
+               <li>Continuous Integration/Delivery (CI/CD)</li>
+            </ul>
+         </div>
+         <div class="content-section">
+            <h2>Contact Me</h2>
+            <p>If you'd like to collaborate or have any questions, feel free to reach out through my profiles.</p>
          </div>
       </div>
 
