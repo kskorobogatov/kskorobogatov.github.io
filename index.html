@@ -1,178 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Kirill Skorobogatov - Salesforce Lightning Experience Developer. Specializing in Salesforce development, back-end web, and mobile application development.">
-      <meta name="keywords" content="Kirill Skorobogatov, Salesforce Developer, Back-End Developer, Mobile Developer, iOS Developer, Android Developer, Salesforce Lightning, Web Development">
-      <meta name="author" content="Kirill Skorobogatov">
-      <meta name="robots" content="index, follow">
-      <meta property="og:title" content="Kirill Skorobogatov - Salesforce Lightning Developer Portfolio">
-      <meta property="og:description" content="Driving efficiency and innovation for businesses with Salesforce ☁️, Back-End Development, and Mobile Applications.">
-      <meta property="og:image" content="./resources/profilepic.jpg">
-      <meta property="og:url" content="https://www.salesforce.com/trailblazer/kskorobogatov">
-      <meta property="og:type" content="website">
-      <title>Kirill Skorobogatov - Lightning Portfolio</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-      <link rel="icon" href="./resources/profilepic.jpg" sizes="32x32">
-      <style>
-         /* General body and background styling */
-         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f7fc; /* Soft light background */
+<head>
+	  <meta name="description" content="Kirill Skorobogatov - Salesforce Lightning Experience Developer. Specializing in Salesforce development, back-end web, and mobile application development.">
+	  <meta name="keywords" content="Kirill Skorobogatov, Salesforce Developer, Back-End Developer, Mobile Developer, iOS Developer, Android Developer, Salesforce Lightning, Web Development">
+	  <meta name="author" content="Kirill Skorobogatov">
+	  <meta name="robots" content="index, follow">
+	  <meta property="og:title" content="Kirill Skorobogatov - Portfolio">
+	  <meta property="og:description" content="Driving efficiency and innovation for businesses with Salesforce ☁️, Back-End Development, and Mobile Applications.">
+	  <meta property="og:image" content="./resources/profilepic.jpg">
+	  <meta property="og:type" content="website">
+	  <title>Kirill Skorobogatov - Portfolio</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac OS X Terminal</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #4a0044, #3d0264);
+            color: #fff; /* White text color */
+            font-family: "Courier New", monospace; /* Terminal font */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            color: #333; /* Dark text for better readability */
-         }
+        }
 
-         /* Header section */
-         header {
-            background: linear-gradient(90deg, #4e73df, #1cc88a); /* Colorful gradient */
-            padding: 40px 0;
-            text-align: center;
-            color: white;
-         }
-
-         .header-content h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-         }
-
-         .header-content p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-         }
-
-         .btn-lightning {
-            background: #ff7f50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: background-color 0.3s;
-         }
-
-         .btn-lightning:hover {
-            background: #ff4500;
-         }
-
-         /* Main content sections */
-         .content-section {
-            padding: 40px 20px;
-            background-color: white;
-            margin: 20px 0;
+        .terminal {
+            background-color: #1d1d1d; /* Dark gray background for the terminal */
+            width: 80%;
+            max-width: 800px;
             border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-         }
-
-         .content-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-         }
-
-         .content-section ul {
-            list-style-type: none;
-            padding: 0;
-         }
-
-         .content-section ul li {
-            font-size: 1.2rem;
-            margin: 10px 0;
-         }
-
-         /* Footer section */
-         footer {
-            text-align: center;
             padding: 20px;
-            background-color: #4e73df;
-            color: white;
-         }
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+        }
 
-         footer p {
-            font-size: 1rem;
-         }
+        .header {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 10px;
+        }
 
-         /* Responsive design */
-         @media (max-width: 768px) {
-            .header-content h1 {
-               font-size: 2.5rem;
-            }
+        .header div {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
 
-            .header-content p {
-               font-size: 1.1rem;
-            }
+        .green {
+            background-color: #4CAF50;
+        }
 
-            .content-section {
-               padding: 20px 15px;
-            }
+        .yellow {
+            background-color: #FFEB3B;
+        }
 
-            .content-section h2 {
-               font-size: 1.8rem;
-            }
+        .red {
+            background-color: #F44336;
+        }
 
-            .btn-lightning {
-               padding: 8px 16px;
-            }
-         }
+        .content {
+            font-size: 18px;
+        }
 
-         @media (max-width: 480px) {
-            .header-content h1 {
-               font-size: 2rem;
-            }
+        a {
+            color: #00FF00; /* Matrix green color for the links */
+            text-decoration: none;
+        }
 
-            .header-content p {
-               font-size: 1rem;
-            }
+        a:hover {
+            text-decoration: underline;
+        }
 
-            .content-section h2 {
-               font-size: 1.5rem;
-            }
-         }
-      </style>
-   </head>
-   <body>
-      <!-- Header Section -->
-      <header>
-         <div class="container">
-            <div class="header-content">
-               <h1>Kirill Skorobogatov</h1>
-               <p>Driving Efficiency and Innovation for Businesses with Salesforce ☁️, Back-End, and Mobile Development</p>
-               <a href="https://github.com/kskorobogatov" target="_blank" class="btn-lightning">GitHub</a>
-               <a href="https://linkedin.com/in/kskorobogatov" target="_blank" class="btn-lightning">LinkedIn</a>
-               <a href="https://www.salesforce.com/trailblazer/kskorobogatov" target="_blank" class="btn-lightning">Trailhead</a>
-            </div>
-         </div>
-      </header>
+        .section {
+            margin-bottom: 20px;
+        }
 
-      <!-- Main Content Section -->
-      <div class="container">
-         <div class="content-section">
-            <h2>About Me</h2>
-            <p>Driving Efficiency and Innovation for Businesses with Salesforce ☁️, AI, Back-End, and Mobile Development.</p>
-         </div>
-         <div class="content-section">
-            <h2>Key Skills</h2>
-            <ul>
-               <li>Salesforce Customization and Development</li>
-               <li>Back-End Web Development</li>
-               <li>Mobile App Development (iOS & Android)</li>
-               <li>Database Design and Management</li>
-               <li>Continuous Integration/Delivery (CI/CD)</li>
-            </ul>
-         </div>
-         <div class="content-section">
-            <h2>Contact Me</h2>
-            <p>If you'd like to collaborate or have any questions, feel free to reach out through my profiles.</p>
-         </div>
-      </div>
+        .section h3 {
+            margin-bottom: 10px;
+        }
 
-      <!-- Footer Section -->
-      <footer>
-         <p>Copyright © 2024 Kirill Skorobogatov</p>
-      </footer>
-   </body>
+        .section p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="header">
+            <a href="https://linkedin.com/in/kskorobogatov/" target="_blank">
+                <div class="red"></div>
+            </a>
+			<a href="https://learncodethehardway.org/" target="_blank">
+                <div class="yellow"></div>
+            </a>
+            <a href="https://google.com" target="_blank">
+                <div class="green"></div>
+            </a>
+        </div>
+		<br>
+        <div class="content">
+            $ Kirill Skorobogatov <br><br>
+            $ Driving Efficiency and Innovation for Businesses with Salesforce ☁️, Back-End, and Mobile Development <br><br>
+
+            $ Links <br><br>
+            $ GitHub: <a href="https://github.com/kskorobogatov" target="_blank">https://github.com/kskorobogatov</a> <br>
+            $ LinkedIn: <a href="https://linkedin.com/in/kskorobogatov/" target="_blank">https://linkedin.com/in/kskorobogatov/</a> <br>
+            $ Trailhead: <a href="https://salesforce.com/trailblazer/kskorobogatov" target="_blank">https://salesforce.com/trailblazer/kskorobogatov</a> <br><br>
+
+            $ Key Skills <br><br>
+            $ Salesforce Customization and Development <br>
+            $ Back-End Web Development <br>
+            $ Mobile App Development (iOS & Android) <br>
+            $ Database Design and Management <br>
+            $ Continuous Integration/Delivery (CI/CD) <br><br>
+
+            $ Contact Me <br><br>
+            $ If you'd like to collaborate or have any questions, feel free to reach out through my profiles. <br>
+        </div>
+    </div>
+</body>
 </html>
