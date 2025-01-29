@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Kirill Skorobogatov - Expert Salesforce Lightning Experience Developer specializing in Salesforce, back-end web, and mobile app development. Explore my portfolio and connect for collaborations.">
-    <meta name="keywords" content="Kirill Skorobogatov, Salesforce Developer, Back-End Developer, Mobile Developer, iOS Developer, Android Developer, Salesforce Lightning, Web Development, Database Design, CI/CD">
+    <meta name="keywords" content="Kirill Skorobogatov, Salesforce Developer, Back-End Developer, Mobile Developer, iOS Developer, Android Developer, Salesforce Lightning, Web Development, Database Design, CI/CD, AI, Artificial Intelligence, Salesforce Certified AI Specialist">
     <meta name="author" content="Kirill Skorobogatov">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kskorobogatov.github.io/" />
@@ -138,6 +138,47 @@
             color: #A0A0A0;
         }
 
+        /* Contact Form */
+        .contact-form {
+            margin-top: 50px;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .contact-form h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #3D3D5C;
+            border-radius: 5px;
+            background: var(--background-dark);
+            color: var(--text-light);
+        }
+
+        .contact-form button {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: var(--secondary-color);
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -200,7 +241,7 @@
         <!-- Hero Section -->
         <section class="hero">
             <h2>Driving Efficiency and Innovation</h2>
-            <p>Specializing in Salesforce ☁️, Back-End Development, and Mobile Applications.</p>
+            <p>Salesforce Technical Analyst and Developer with 8+ years of IT experience. Proven ability to develop and maintain complex applications to support business needs. Expertise in Salesforce, Back-End Development, and Mobile Application Development. Passionate about AI and delivering innovative solutions.</p>
             <div class="cta">
                 <a href="https://linkedin.com/in/kskorobogatov/" target="_blank">Connect with Me</a>
             </div>
@@ -223,6 +264,22 @@
                 <h3>Mobile Development</h3>
                 <p>iOS & Android apps with modern frameworks.</p>
             </div>
+            <div class="skill-card">
+                <i class="fas fa-brain"></i>
+                <h3>AI & Machine Learning</h3>
+                <p>Salesforce Certified AI Specialist with a passion for AI-driven solutions.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h3>Contact Me</h3>
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
 
         <!-- Footer -->
