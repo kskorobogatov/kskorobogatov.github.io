@@ -7,155 +7,245 @@
     <meta name="keywords" content="Kirill Skorobogatov, Salesforce Developer, Back-End Developer, Mobile Developer, iOS Developer, Android Developer, Salesforce Lightning, Web Development, Database Design, CI/CD">
     <meta name="author" content="Kirill Skorobogatov">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://yourwebsite.com" />
+    <link rel="canonical" href="https://kskorobogatov.github.io/" />
     <meta property="og:title" content="Kirill Skorobogatov - Salesforce & Full-Stack Developer Portfolio">
     <meta property="og:description" content="Driving efficiency and innovation for businesses with Salesforce ☁️, Back-End Development, and Mobile Applications. Connect with me for collaborations.">
-    <meta property="og:image" content="./resources/profilepic.jpg">
+    <meta property="og:image" content="https://kskorobogatov.github.io/resources/profilepic.jpg">
     <meta property="og:url" content="https://kskorobogatov.github.io/">
     <meta property="og:type" content="website">
     <link rel="icon" href="./resources/favicon.ico" type="image/x-icon">
     <title>Kirill Skorobogatov - Salesforce & Full-Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #6C63FF;
+            --secondary-color: #FF6584;
+            --background-dark: #1E1E2F;
+            --background-light: #FFFFFF;
+            --text-dark: #1E1E2F;
+            --text-light: #FFFFFF;
+            --card-bg: #2D2D44;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            background: linear-gradient(135deg, #4a0044, #3d0264);
-            color: #fff;
-            font-family: "Courier New", monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
+            padding: 0;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .terminal {
-            background-color: #1d1d1d;
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-            overflow: hidden;
         }
 
-        .header {
+        /* Header */
+        header {
             display: flex;
-            justify-content: flex-start;
-            margin-bottom: 10px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
         }
 
-        .header div {
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            margin-right: 5px;
+        header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
         }
 
-        .green {
-            background-color: #4CAF50;
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary-color);
         }
 
-        .yellow {
-            background-color: #FFEB3B;
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
         }
 
-        .red {
-            background-color: #F44336;
-        }
-
-        .content {
-            font-size: 18px;
-        }
-
-        a {
-            color: #00FF00;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .section {
+        .hero h2 {
+            font-size: 3rem;
             margin-bottom: 20px;
         }
 
-        .section h3 {
+        .hero p {
+            font-size: 1.2rem;
+            color: #A0A0A0;
+        }
+
+        .hero .cta {
+            margin-top: 30px;
+        }
+
+        .hero .cta a {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .hero .cta a:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Skills Section */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
             margin-bottom: 10px;
         }
 
-        .section p {
-            margin: 0;
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
+        .skill-card p {
+            font-size: 1rem;
+            color: #A0A0A0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            border-top: 1px solid #3D3D5C;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Dark/Light Mode */
+        body.light-mode {
+            background-color: var(--background-light);
+            color: var(--text-dark);
+        }
+
+        body.light-mode .skill-card {
+            background: var(--background-light);
+            box-shadow: var(--card-shadow);
+        }
+
+        body.light-mode footer {
+            border-top: 1px solid #E0E0E0;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .content {
-                font-size: 16px;
+            .hero h2 {
+                font-size: 2rem;
             }
-            .terminal {
-                width: 95%;
-                padding: 15px;
-            }
-        }
 
-        @media (max-width: 480px) {
-            .content {
-                font-size: 14px;
+            .hero p {
+                font-size: 1rem;
             }
-            .terminal {
-                width: 100%;
-                padding: 10px;
+
+            .skills {
+                grid-template-columns: 1fr;
             }
         }
     </style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kirill Skorobogatov",
-      "jobTitle": "Salesforce & Full-Stack Developer",
-      "url": "https://kskorobogatov.github.io/",
-      "sameAs": [
-        "https://linkedin.com/in/kskorobogatov/",
-        "https://github.com/kskorobogatov",
-        "https://salesforce.com/trailblazer/kskorobogatov"
-      ],
-      "description": "Expert in Salesforce Lightning, back-end web development, and mobile app development. Passionate about driving business efficiency and innovation."
-    }
-    </script>
 </head>
 <body>
-    <div class="terminal">
-        <div class="header">
-            <a href="https://linkedin.com/in/kskorobogatov/" target="_blank" aria-label="LinkedIn Profile">
-                <div class="red"></div>
-            </a>
-            <a href="https://learncodethehardway.org/" target="_blank" aria-label="Learn Code the Hard Way">
-                <div class="yellow"></div>
-            </a>
-            <a href="https://google.com" target="_blank" aria-label="Google">
-                <div class="green"></div>
-            </a>
-        </div>
-        <br>
-        <div class="content">
-            $ Kirill Skorobogatov <br><br>
-            $ Driving Efficiency and Innovation for Businesses with Salesforce ☁️, Back-End, and Mobile Development <br><br>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Kirill Skorobogatov</h1>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
 
-            $ Links <br><br>
-            $ GitHub: <a href="https://github.com/kskorobogatov" target="_blank">https://github.com/kskorobogatov</a> <br>
-            $ LinkedIn: <a href="https://linkedin.com/in/kskorobogatov/" target="_blank">https://linkedin.com/in/kskorobogatov/</a> <br>
-            $ Trailhead: <a href="https://salesforce.com/trailblazer/kskorobogatov" target="_blank">https://salesforce.com/trailblazer/kskorobogatov</a> <br><br>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Driving Efficiency and Innovation</h2>
+            <p>Specializing in Salesforce ☁️, Back-End Development, and Mobile Applications.</p>
+            <div class="cta">
+                <a href="https://linkedin.com/in/kskorobogatov/" target="_blank">Connect with Me</a>
+            </div>
+        </section>
 
-            $ Key Skills <br><br>
-            $ Salesforce Customization and Development <br>
-            $ Back-End Web Development <br>
-            $ Mobile App Development (iOS & Android) <br>
-            $ Database Design and Management <br>
-            $ Continuous Integration/Delivery (CI/CD) <br><br>
+        <!-- Skills Section -->
+        <section class="skills">
+            <div class="skill-card">
+                <i class="fas fa-cloud"></i>
+                <h3>Salesforce Development</h3>
+                <p>Customization, Lightning Components, and Apex.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code"></i>
+                <h3>Back-End Development</h3>
+                <p>Building scalable and efficient server-side solutions.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Development</h3>
+                <p>iOS & Android apps with modern frameworks.</p>
+            </div>
+        </section>
 
-            $ Contact Me <br><br>
-            $ If you'd like to collaborate or have any questions, feel free to reach out through my profiles. <br>
-        </div>
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Kirill Skorobogatov</p>
+            <a href="https://github.com/kskorobogatov" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/kskorobogatov/" target="_blank">LinkedIn</a>
+            <a href="https://salesforce.com/trailblazer/kskorobogatov" target="_blank">Trailhead</a>
+        </footer>
     </div>
+
+    <script>
+        // Dark/Light Mode Toggle
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('light-mode');
+            const themeToggle = document.querySelector('.theme-toggle i');
+            if (body.classList.contains('light-mode')) {
+                themeToggle.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                themeToggle.classList.replace('fa-sun', 'fa-moon');
+            }
+        }
+    </script>
 </body>
 </html>
