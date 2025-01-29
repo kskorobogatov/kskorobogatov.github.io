@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Kirill Skorobogatov - Expert Salesforce Lightning Experience Developer specializing in Salesforce, back-end web, and mobile app development. Explore my portfolio and connect for collaborations.">
-    <meta name="keywords" content="Kirill Skorobogatov, Salesforce Developer, Back-End Developer, Mobile Developer, iOS Developer, Android Developer, Salesforce Lightning, Web Development, Database Design, CI/CD, AI, Artificial Intelligence, Salesforce Certified AI Specialist">
+    <meta name="keywords" content="Kirill Skorobogatov, Salesforce Developer, Back-End Developer, Mobile Developer, iOS Developer, Android Developer, Salesforce Lightning, Web Development, Database Design, CI/CD">
     <meta name="author" content="Kirill Skorobogatov">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kskorobogatov.github.io/" />
@@ -138,32 +138,33 @@
             color: #A0A0A0;
         }
 
-        /* Contact Form */
-        .contact-form {
+        /* Contact Section */
+        .contact-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
             margin-top: 50px;
+        }
+
+        .contact-form {
             background: var(--card-bg);
             padding: 20px;
             border-radius: 10px;
             box-shadow: var(--card-shadow);
         }
 
-        .contact-form h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-        }
-
         .contact-form input,
         .contact-form textarea {
-            width: 100%;
-            max-width: 98%;
+            width: 98%;
             min-width: 98%;
+            max-width: 98%;
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #3D3D5C;
             border-radius: 5px;
             background: var(--background-dark);
             color: var(--text-light);
+            font-family: 'Poppins', sans-serif;
         }
 
         .contact-form button {
@@ -179,6 +180,19 @@
 
         .contact-form button:hover {
             background: var(--secondary-color);
+        }
+
+        .twitter-feed {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .twitter-feed iframe {
+            width: 100%;
+            border: none;
+            border-radius: 10px;
         }
 
         /* Footer */
@@ -205,7 +219,9 @@
             color: var(--text-dark);
         }
 
-        body.light-mode .skill-card {
+        body.light-mode .skill-card,
+        body.light-mode .contact-form,
+        body.light-mode .twitter-feed {
             background: var(--background-light);
             box-shadow: var(--card-shadow);
         }
@@ -227,6 +243,10 @@
             .skills {
                 grid-template-columns: 1fr;
             }
+
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -243,7 +263,7 @@
         <!-- Hero Section -->
         <section class="hero">
             <h2>Driving Efficiency and Innovation</h2>
-            <p>Salesforce Technical Analyst and Developer with 8+ years of IT experience. Proven ability to develop and maintain complex applications to support business needs. Expertise in Salesforce, Back-End Development, and Mobile Application Development. Passionate about AI and delivering innovative solutions.</p>
+            <p>Specializing in Salesforce ☁️, Back-End Development, and Mobile Applications.</p>
             <div class="cta">
                 <a href="https://linkedin.com/in/kskorobogatov/" target="_blank">Connect with Me</a>
             </div>
@@ -266,27 +286,32 @@
                 <h3>Mobile Development</h3>
                 <p>iOS & Android apps with modern frameworks.</p>
             </div>
-            <div class="skill-card">
-                <i class="fas fa-brain"></i>
-                <h3>AI & Machine Learning</h3>
-                <p>Salesforce Certified AI Specialist with a passion for AI-driven solutions.</p>
-            </div>
         </section>
 
-        <!-- Contact Form -->
-        <section class="contact-form">
-            <h3>Contact Me</h3>
-            <form action="https://formspree.io/f/your-form-id" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Contact Me</h3>
+                <form action="#" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Twitter Feed -->
+            <div class="twitter-feed">
+                <h3>X (Formerly Twitter) Feed</h3>
+                <a class="twitter-timeline" href="https://twitter.com/kskoro1" data-height="500" data-theme="dark">Posts by kskoro1</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </section>
 
         <!-- Footer -->
         <footer>
-            <p>© 2025 Kirill Skorobogatov</p>
+            <p>© 2023 Kirill Skorobogatov</p>
             <a href="https://github.com/kskorobogatov" target="_blank">GitHub</a>
             <a href="https://linkedin.com/in/kskorobogatov/" target="_blank">LinkedIn</a>
             <a href="https://salesforce.com/trailblazer/kskorobogatov" target="_blank">Trailhead</a>
