@@ -21,7 +21,7 @@
         /* Global Styles */
         :root {
             --primary-color: #6C63FF;
-            --secondary-color: #FF6584;
+            --secondary-color: #6c63ffc2;
             --background-dark: #1E1E2F;
             --background-light: #FFFFFF;
             --text-dark: #1E1E2F;
@@ -154,13 +154,13 @@
         }
 
         .contact-form h3 {
-            font-size: 2rem;
             margin-bottom: 20px;
             color: var(--primary-color);
         }
 
         .contact-form input,
         .contact-form textarea {
+            resize: none;
             width: 98%;
             min-width: 98%;
             max-width: 98%;
@@ -312,7 +312,7 @@
                 <form action="https://formspree.io/f/your-form-id" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" style=”resize: none;” placeholder="Your Message" rows="5" required></textarea>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
