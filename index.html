@@ -18,17 +18,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
         /* Global Styles */
         :root {
-            --primary-color: #6C63FF;
-            --secondary-color: #6c63ffc2;
-            --background-dark: #1E1E2F;
+            --primary-color: #318aff;
+            --secondary-color: #1e4981;
+            --background-dark: #1a192b;
             --background-light: #FFFFFF;
             --text-dark: #1E1E2F;
             --text-light: #FFFFFF;
-            --card-bg: #2D2D44;
+            --card-bg: #2d2d44;
             --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -57,8 +57,8 @@
 
         header h1 {
             font-size: 3rem;
-            font-weight: 600;
-            font-family: 'Great Vibes', cursive;
+            font-weight: 400;
+            font-family: "Oswald", serif;
             color: var(--primary-color);
         }
 
@@ -234,10 +234,17 @@
         }
 
         body.light-mode .skill-card,
+        body.light-mode .contact-form input, 
+        body.light-mode .contact-form textarea,
         body.light-mode .contact-form,
         body.light-mode .twitter-feed {
             background: var(--background-light);
             box-shadow: var(--card-shadow);
+        }
+
+        body.light-mode .contact-form input, 
+        body.light-mode .contact-form textarea {
+            border: 1px solid #d8d8d8;
         }
 
         body.light-mode footer {
@@ -323,8 +330,7 @@
             <!-- Twitter Feed -->
             <div class="twitter-feed">
                 <h3>X (Formerly Twitter) Feed</h3>
-                <a class="twitter-timeline" href="https://twitter.com/kskoro1" data-height="500" data-theme="dark">Tweets by kskoro1</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a class="twitter-timeline" href="https://twitter.com/kskoro1?ref_src=twsrc%5Etfw">Tweets by kskoro1</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </section>
 
